@@ -1,0 +1,27 @@
+// 字体颜色
+$menu-active-text: var(--menu-active-text-color);
+$menu-text: var(--menu-text-color);
+
+// 背景色
+$body-background: #fff;
+$menu-hover-background: var(--menu-hover-bg-color);
+$menu-background: var(--menu-bg-color);
+
+// 字体大小
+$font-standard: 14px;
+$font-small: 16px;
+$font-middle: 18px;
+$font-large: 20px;
+
+// 字体
+$font-family: 'Source Han Sans CN';
+
+// 导航栏高度
+$sidebar-width: 208px; // 侧边栏宽度
+$sidebar-width-collapsed: 100px; // 侧边栏收缩宽度
+$navbar-height: 64px; // 导航栏高度
+
+@mixin font($size: $font-standard, $family: $font-family) {
+    font-family: $family;
+    font-size: $size;
+}

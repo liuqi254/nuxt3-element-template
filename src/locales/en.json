@@ -1,0 +1,23 @@
+{
+    "title": "nuxt3",
+    "router": {
+        "home": "Dashboard"
+    },
+    "layout": {
+        "screenfull": "Full Screen",
+        "exitFullscreen": "Exit Full Screen",
+        "LangSelect": "Select Language",
+        "message": "message",
+        "search": "search",
+        "switchTheme": "Switch Themes",
+        "PersonalizedSettings": "Personalized Settings",
+        "ThemeColor": "Theme Color",
+        "LayoutSetting": "Layout Setting",
+        "LeftMode": "Left Mode",
+        "TopMode": "Top Mode"
+    },
+    "language": {
+        "en-US": "EN",
+        "zh-CN": "中文"
+    }
+}

@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+:root {
+    --menu-bg-color: #2b455d;
+    --menu-hover-bg-color: rgb(255 255 255 / 50%);
+    --menu-active-text-color: #fff;
+    --menu-text-color: #fff;
+
+    // --el-menu-bg-color: #2b455d;
+    body {
+        --el-menu-bg-color: var(--menu-bg-color);
+        --el-menu-hover-bg-color: var(--menu-hover-bg-color);
+        --el-menu-active-color: var(--menu-active-text-color);
+        --el-menu-text-color: var(--menu-text-color);
+        --el-menu-hover-text-color: var(--menu-active-text-color);
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "title": "nuxt3",
+    "router": {
+        "home": "主页"
+    },
+    "layout": {
+        "screenfull": "全屏",
+        "exitFullscreen": "退出全屏",
+        "LangSelect": "选择语言",
+        "message": "消息",
+        "search": "搜索",
+        "switchTheme": "切换主题",
+        "PersonalizedSettings": "个性化设置",
+        "ThemeColor": "主题颜色",
+        "LayoutSetting": "导航设置",
+        "LeftMode": "左侧模式",
+        "TopMode": "顶部模式",
+        "gitee": "gitee",
+        "logout": "退出登录"
+    },
+    "language": {
+        "en-US": "EN",
+        "zh-CN": "中文"
+    },
+    "errors": {
+        "404": "抱歉，你访问的页面不存在",
+        "401": "抱歉，你无权访问该页面",
+        "505": "抱歉，服务器出错了",
+        "goBackToHome": "返回首页"
+    },
+    "login": {
+        "login": "登录",
+        "accountLogin": "账号登录",
+        "scanLogin": "扫码登录",
+        "register": "注册",
+        "ForgotPassword": "忘记密码",
+        "verificationCode": "验证码",
+        "account": "账号",
+        "password": "密码",
+        "loginSuccess": "登录成功"
+    },
+    "formRules": {}
+}
