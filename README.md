@@ -1,5 +1,3 @@
-# 云平台2.0用户端
-
 ## 参考
 
 ## Setup
@@ -31,4 +29,3 @@ pnpm run build
 pnpm run preview
 
 ```
-

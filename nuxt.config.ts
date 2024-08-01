@@ -25,6 +25,7 @@ export default defineNuxtConfig({
         // 打包文件分析
         analyze: true,
     },
+    // 修改src目录
     srcDir: 'src/',
     ssr: true,
     app: {
