@@ -82,9 +82,9 @@
     };
 
     // 初始化主题颜色
-    if (!appStore.themeColor) {
-        appStore.setThemeColor('#2b455d');
-    }
+    // if (!appStore.themeColor) {
+    //     appStore.setThemeColor('#2b455d');
+    // }
 </script>
 
 <style scoped lang="scss">

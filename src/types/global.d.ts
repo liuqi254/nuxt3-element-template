@@ -86,7 +86,7 @@ declare global {
         label: string;
         value: string | number;
     }
-
+    
     type Partial<T> = {
         [P in keyof T]?: T[P] | undefined;
     };

@@ -21,13 +21,11 @@ export const useClientRequest = <T = unknown>(url: string, opts?: FetchOptions) 
         retry: 0,
         baseURL: '',
         onRequest({ options }) {
-            // 如果有token，则添加到请求参数中 lang语言 zh-cn/en
+            // 如果有token，则添加到请求参数中
             if (loginStatus?.token) {
                 options.query = { ...options.query, token: loginStatus.token };
             }
-            if (loginStatus?.user_id) {
-                options.query = { ...options.query, userid: loginStatus.user_id };
-            }
+
             options.query = { ...options.query, lang, flag: 'WEB', rand: new Date().getTime() };
         },
         onResponse({ response }) {

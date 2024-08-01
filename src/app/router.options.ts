@@ -27,7 +27,12 @@ export const routes: RouteRecordRaw[] = [
         name: '主页',
         meta: { title: 'home', affix: true, icon: 'homepage', keepalive: true },
     },
-  
+    {
+        path: '/menu',
+        component: () => import('@/pages/menu/index.vue'),
+        name: '菜单',
+        meta: { title: 'menu', icon: 'homepage', keepalive: true },
+    },
 ];
 
 export default {

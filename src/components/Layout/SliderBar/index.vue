@@ -27,6 +27,12 @@
                 >
                     <span>{{ $t(`router.home`) }}</span>
                 </el-menu-item>
+                <el-menu-item
+                    index="/menu"
+                    :title="$t(`router.menu`)"
+                >
+                    <span>{{ $t(`router.menu`) }}</span>
+                </el-menu-item>
             </el-menu>
         </el-scrollbar>
         <!-- 右侧菜单 -->

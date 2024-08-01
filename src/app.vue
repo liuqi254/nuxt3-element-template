@@ -1,7 +1,7 @@
 <template>
     <!-- 路由 -->
     <ElConfigProvider
-        :size="size as any"
+        :size="size"
         :z-index="3000"
         :locale="locale"
     >
@@ -17,7 +17,7 @@
 <script setup lang="ts">
     import zhCn from 'element-plus/dist/locale/zh-cn.mjs';
     import en from 'element-plus/dist/locale/en.mjs';
-    import { DeviceEnum, LayoutEnum } from './enums/AppSettingsEnum';
+    import { DeviceEnum } from './enums/AppSettingsEnum';
     import { useAppStore } from '@/stores/modules/app';
     import { useUserStore } from '@/stores/modules/user';
 
@@ -53,7 +53,6 @@
         const isMobile = /(Android|webOS|iPhone|iPod|tablet|BlackBerry|Mobile)/i.test(userAgent);
         appStore.toggleDevice(isMobile ? DeviceEnum.MOBILE : DeviceEnum.DESKTOP);
         appStore.closeSideBar(false);
-        appStore.setLayout(isMobile ? LayoutEnum.LEFT : LayoutEnum.TOP);
     }
 
     // 如果登录了，获取用户信息

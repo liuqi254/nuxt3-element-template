@@ -7,25 +7,25 @@ export const useAppStore = defineStore('app', () => {
     });
 
     /** 设备 */
-    const device = useCookie<AppSettings['device']>('device');
+    const device = useCookie<AppSettings['device']>('device', { default: () => 'desktop' });
 
     // const device = ref<AppSettings['device']>(isMobile ? 'mobile' : 'desktop');
     /** element组件size大小 */
     const size = ref<AppSettings['size']>('default');
     /** 是否显示tags栏 */
-    const isTagsView = ref<AppSettings['isTagsView']>(false);
+    const isTagsView = ref<AppSettings['isTagsView']>(true);
     /** 是否固定header */
     const isFixedHeader = ref<AppSettings['isFixedHeader']>(true);
     /** 是否显示logo */
     const isShowLogo = ref<AppSettings['isShowLogo']>(true);
     /** 布局 顶部或左边 */
-    const layout = ref<AppSettings['layout']>('top');
+    const layout = useCookie<AppSettings['layout']>('layout', { default: () => 'left' });
     /** 是否显示菜单图标 */
     const isShowMenuIcon = ref<AppSettings['isShowMenuIcon']>(false);
     /** 主题 黑暗/明亮 */
     const theme = ref<AppSettings['theme']>('light');
     /** 主题色 */
-    const themeColor = useCookie<AppSettings['themeColor']>('themeColor');
+    const themeColor = useCookie<AppSettings['themeColor']>('themeColor', { default: () => '#2b455d' });
 
     /** 显示setting */
     const isShowSetting = ref<AppSettings['isShowSetting']>(false);

@@ -24,9 +24,7 @@ export const useServerRequest = <T = unknown>(url: string, opts?: UseFetchOption
             if (loginStatus?.token) {
                 options.query = { ...options.query, token: loginStatus.token };
             }
-            if (loginStatus?.user_id) {
-                options.query = { ...options.query, userid: loginStatus.user_id };
-            }
+
             options.query = { ...options.query, lang, flag: 'WEB', rand: new Date().getTime() };
         },
         onResponse({ response }) {

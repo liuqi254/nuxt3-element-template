@@ -7,7 +7,6 @@ export interface LoginReq {
 export interface LoginRes {
     userinfo: {
         id: number;
-
         token: string;
     };
 }

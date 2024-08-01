@@ -47,9 +47,9 @@
 
                 <p
                     class="user-name"
-                    :title="userStore.userInfo.nickname"
+                    :title="userStore.userInfo.username"
                 >
-                    {{ userStore.userInfo.nickname }}
+                    {{ userStore.userInfo.username }}
                 </p>
             </div>
             <template #dropdown>

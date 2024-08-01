@@ -53,6 +53,7 @@ export const useUserStore = defineStore(
                 //     .catch((error: any) => {
                 //         reject(error);
                 //     });
+                userInfo.value = { id: 1, username: 'admin' };
                 resolve();
             });
         }

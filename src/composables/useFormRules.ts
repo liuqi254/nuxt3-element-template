@@ -1,19 +1,13 @@
-export function useFormRules(formData?: any) {
+export function useFormRules() {
     // 表单验证规则
-    const { t } = useI18n();
+
     return {
         // 用户名验证规则
         account: [
             {
                 required: true,
                 trigger: 'blur',
-                message: t('form.pleaseInput') + t('login.account'),
-            },
-            {
-                min: 3,
-                max: 18,
-                message: t('login.accountRule'),
-                trigger: 'blur',
+                message: '请输入账号',
             },
         ],
         // 密码验证规则
@@ -21,13 +15,7 @@ export function useFormRules(formData?: any) {
             {
                 trigger: 'blur',
                 required: true,
-                message: t('form.pleaseInput') + t('login.password'),
-            },
-            {
-                min: 6,
-                max: 16,
-                message: t('login.passwordRule'),
-                trigger: 'blur',
+                message: '请输入密码',
             },
         ],
 
@@ -36,7 +24,7 @@ export function useFormRules(formData?: any) {
             {
                 required: true,
                 trigger: 'blur',
-                message: t('form.pleaseInput') + t('login.verificationCode'),
+                message: '请输入验证码',
             },
         ],
     };

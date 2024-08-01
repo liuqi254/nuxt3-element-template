@@ -30,12 +30,12 @@ export default defineNuxtConfig({
     app: {
         baseURL: '/',
         head: {
-            title: '健康管理平台-比扬医疗',
+            title: 'nuxt3',
             charset: 'UTF-8',
             viewport: 'width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no',
             meta: [
-                { name: 'keywords', content: '健康管理平台-比扬医疗' },
-                { name: 'description', content: '健康管理平台-比扬医疗' },
+                { name: 'keywords', content: 'nuxt3' },
+                { name: 'description', content: 'nuxt3' },
             ],
         },
         pageTransition: { name: 'page', mode: 'out-in' },

@@ -37,7 +37,7 @@ export const enum SizeEnum {
     /**
      * 中等
      */
-    MEDIUM = 'medium',
+    LARGE = 'large',
     /**
      * 小
      */

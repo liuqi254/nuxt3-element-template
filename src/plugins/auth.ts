@@ -1,5 +1,6 @@
 import { useUserStore } from '~/stores/modules/user';
 
+// 自定义指令，判断权限，没有权限则移除元素
 export default defineNuxtPlugin(nuxtApp => {
     // 不再是 import Vue from 'vue'的写法了
     nuxtApp.vueApp.directive('auth', {

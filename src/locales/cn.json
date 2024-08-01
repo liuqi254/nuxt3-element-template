@@ -1,7 +1,8 @@
 {
     "title": "nuxt3",
     "router": {
-        "home": "主页"
+        "home": "主页",
+        "menu": "菜单"
     },
     "layout": {
         "screenfull": "全屏",

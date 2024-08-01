@@ -11,10 +11,7 @@
             v-if="!classObj.hideSidebar && classObj.mobile && !classObj['layout-top']"
         ></div>
         <!-- 侧边栏 -->
-        <LayoutSliderBar
-            class="sidebar-container"
-            :class="{ 'fix-sidebar': isFixedHeader || classObj['layout-left'] }"
-        />
+        <LayoutSliderBar class="sidebar-container" />
         <div
             :class="{ hasTagsView: isTagsView }"
             class="main-container"
@@ -22,6 +19,7 @@
             <!-- 顶部navbar -->
             <div :class="{ 'fixed-header': isFixedHeader }">
                 <LayoutNavbar v-if="!classObj['layout-top'] || classObj.mobile" />
+                <LayoutTagsView v-if="isTagsView" />
             </div>
 
             <!-- 内容主体 -->
@@ -129,12 +127,6 @@
 </script>
 
 <style lang="scss">
-    @import '@/assets/css/element';
-
-    .page-container {
-        padding: 20px;
-    }
-
     .main-container {
         position: relative;
         min-height: 100%;
@@ -152,22 +144,17 @@
     }
 
     .sidebar-container {
-        position: absolute;
+        position: fixed;
         top: 0;
         bottom: 0;
         left: 0;
-        z-index: 10001;
+        z-index: 999;
         box-sizing: border-box;
         width: $sidebar-width;
         height: 100%;
         overflow: hidden;
-        font-size: 0;
         background-color: $menu-background;
         transition: width 0.28s;
-    }
-
-    .fix-sidebar {
-        position: fixed;
     }
 
     // 顶部固定
@@ -187,8 +174,7 @@
     .app-main {
         position: relative;
         box-sizing: content-box;
-
-        // min-height: calc(100vh - $navbar-height);
+        min-height: calc(100vh - $navbar-height);
     }
 
     // 隐藏菜单栏
@@ -229,14 +215,15 @@
         }
     }
 
+    // 如果有tagsView
     .hasTagsView {
         .app-main {
             /* 84 = navbar + tags-view = 50 + 34 */
-            min-height: calc(100vh - $navbar-height);
+            min-height: calc(100vh - $navbar-height - $tags-view-height);
         }
 
         .fixed-header + .app-main {
-            padding-top: calc($navbar-height);
+            padding-top: calc($navbar-height + $tags-view-height);
         }
     }
 
@@ -256,10 +243,10 @@
 
     // 顶部布局
     .layout-top {
-        .fixed-header + .app-main {
-            min-height: calc(100vh - $navbar-height);
-            padding-top: 0;
-        }
+        // .fixed-header + .app-main {
+        //     min-height: calc(100vh - $navbar-height);
+        //     padding-top: 0;
+        // }
 
         .main-container {
             min-height: 100vh;
