@@ -56,7 +56,7 @@
                 <el-dropdown-menu>
                     <a
                         target="_blank"
-                        href=""
+                        href="https://gitee.com/liu-qi2/nuxt3-element-template.git"
                     >
                         <el-dropdown-item>{{ $t('layout.gitee') }}</el-dropdown-item>
                     </a>
